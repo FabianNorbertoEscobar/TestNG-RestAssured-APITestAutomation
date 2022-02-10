@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Gradle suite]" verbose="0">
+  <test thread-count="5" parallel="tests" name="Gradle test(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <exclude name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Books">
+        <methods>
+          <include name="deleteNonExistentBook_FailMessage"/>
+          <include name="createAndDeleteBook"/>
+          <include name="getBooksList"/>
+        </methods>
+      </class> <!-- Books -->
+    </classes>
+  </test> <!-- Gradle test(failed) -->
+</suite> <!-- Failed suite [Gradle suite] -->
